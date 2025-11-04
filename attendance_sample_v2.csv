@@ -1,0 +1,41 @@
+Attendance_ID,Session_ID,Student_ID,Status,Comments
+1,39,5,Absent,Illness
+2,36,26,Present,
+3,6,6,Present,
+4,23,20,Present,
+5,40,39,Present,
+6,38,34,Present,
+7,33,13,Present,
+8,6,6,Present,
+9,8,21,Present,
+10,28,21,Present,
+11,9,31,Present,
+12,11,11,Present,
+13,17,25,Absent,Cancelled in advance
+14,26,6,Present,
+15,37,27,Present,
+16,22,20,Absent,No show
+17,39,28,Present,
+18,39,37,Present,
+19,25,30,Present,
+20,21,36,Present,
+21,30,6,Present,
+22,38,31,Absent,No show
+23,9,33,Present,
+24,36,8,Present,
+25,28,21,Present,
+26,3,21,Present,
+27,23,36,Present,
+28,4,25,Present,
+29,12,1,Present,
+30,27,18,Present,
+31,5,38,Present,
+32,40,7,Present,
+33,15,38,Absent,Illness
+34,20,7,Present,
+35,32,40,Absent,Illness
+36,36,4,Present,
+37,38,3,Present,
+38,29,16,Present,
+39,26,20,Present,
+40,30,23,Present,

@@ -1,0 +1,41 @@
+Subject_ID,Subject_Name,Course_Code
+1,Calculus I,MATH-106
+2,Statistics,STAT-372
+3,Data Structures,CS-336
+4,General Physics I,PHYS-121
+5,College Writing,ENG-462
+6,Data Structures,CS-187
+7,General Physics I,PHYS-201
+8,General Chemistry,CHEM-173
+9,College Writing,ENG-233
+10,General Biology,BIO-170
+11,College Algebra,MATH-238
+12,Intro to Programming,CS-424
+13,Statistics,STAT-280
+14,Database Systems,CS-468
+15,College Writing,ENG-279
+16,Microeconomics,ECON-210
+17,General Chemistry,CHEM-414
+18,Database Systems,CS-427
+19,General Biology,BIO-443
+20,College Writing,ENG-455
+21,Microeconomics,ECON-110
+22,Statistics,STAT-304
+23,Calculus I,MATH-206
+24,Calculus II,MATH-197
+25,College Algebra,MATH-196
+26,General Biology,BIO-428
+27,General Physics I,PHYS-416
+28,Statistics,STAT-185
+29,Microeconomics,ECON-263
+30,College Writing,ENG-395
+31,Calculus II,MATH-159
+32,Microeconomics,ECON-351
+33,General Biology,BIO-275
+34,Calculus II,MATH-470
+35,Calculus II,MATH-394
+36,Calculus II,MATH-192
+37,Microeconomics,ECON-433
+38,College Writing,ENG-418
+39,Calculus II,MATH-185
+40,Database Systems,CS-306
