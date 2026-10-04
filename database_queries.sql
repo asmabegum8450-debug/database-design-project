@@ -46,3 +46,10 @@ FROM subjects;
 SELECT Subject_Name, Course_Code
 FROM subjects
 ORDER BY Subject_Name;
+-- Week 5 Query Testing
+
+-- 11. Count attendance records by status
+SELECT Status, COUNT(*) AS Attendance_Count
+FROM attendance
+GROUP BY Status
+ORDER BY Attendance_Count DESC;
