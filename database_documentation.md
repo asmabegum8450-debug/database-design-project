@@ -56,3 +56,22 @@ I organized the database documentation to make the purpose of the main datasets 
 ### Next Steps
 
 The next stage of development will focus on continuing database testing, validating relationships between tables, and creating additional queries that provide useful information from the database.
+## Week 6: Data Dictionary
+
+### Students
+The students dataset contains information about students in the database. Student information can be used to identify students and connect them to sessions and attendance records.
+
+### Tutors
+The tutors dataset contains information about tutors. Tutor records can be connected to sessions to identify which tutor is responsible for a session.
+
+### Subjects
+The subjects dataset contains information about the subjects offered. Subject records can be connected to sessions to identify the subject being taught.
+
+### Sessions
+The sessions dataset contains information about scheduled tutoring sessions. Sessions connect students, tutors, and subjects and provide the main structure for analyzing tutoring activity.
+
+### Attendance
+The attendance dataset records whether students attended scheduled sessions. Attendance information can be used to analyze participation and attendance patterns.
+
+### Database Relationships
+The datasets work together through shared identifiers. These relationships allow the database to connect students with sessions, tutors, subjects, and attendance records. Clearly documenting these relationships will make future SQL queries and database testing easier.
