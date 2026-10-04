@@ -39,3 +39,20 @@ The project includes SQL queries that can be used to view and analyze the data. 
 ## Future Improvements
 
 Future development could include additional queries, data validation, reporting, and analysis to make the database more useful for decision-making.
+## Week 6 Database Documentation Update
+
+### Database Implementation Review
+
+During Week 6, I reviewed the current database project structure and documentation. The project includes sample data for students, tutors, subjects, sessions, and attendance. I reviewed how these datasets support the database design and how the tables can be used together for future analysis.
+
+### Data Relationships
+
+The database is designed around relationships between students, tutors, subjects, sessions, and attendance records. Students can participate in sessions, tutors can be associated with sessions, and attendance records can be connected to students and sessions. These relationships allow the database to support useful queries and reporting.
+
+### Documentation Improvements
+
+I organized the database documentation to make the purpose of the main datasets and their relationships clearer. This documentation will help guide future database implementation, testing, and SQL query development.
+
+### Next Steps
+
+The next stage of development will focus on continuing database testing, validating relationships between tables, and creating additional queries that provide useful information from the database.
