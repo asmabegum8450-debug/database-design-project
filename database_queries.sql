@@ -53,3 +53,28 @@ SELECT Status, COUNT(*) AS Attendance_Count
 FROM attendance
 GROUP BY Status
 ORDER BY Attendance_Count DESC;
+-- Week 7: Additional Database Analysis Queries
+
+-- Query 1: Count total students
+SELECT COUNT(*) AS total_students
+FROM students;
+
+-- Query 2: Count total tutors
+SELECT COUNT(*) AS total_tutors
+FROM tutors;
+
+-- Query 3: Count total subjects
+SELECT COUNT(*) AS total_subjects
+FROM subjects;
+
+-- Query 4: Count sessions by subject
+SELECT subject_id, COUNT(*) AS total_sessions
+FROM sessions
+GROUP BY subject_id
+ORDER BY total_sessions DESC;
+
+-- Query 5: Count attendance records by status
+SELECT attendance_status, COUNT(*) AS total_records
+FROM attendance
+GROUP BY attendance_status
+ORDER BY total_records DESC;
