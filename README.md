@@ -1,1 +1,15 @@
-This database tracks tutoring sessions at a Student Learning Center. It includes five entities: Students, Tutors, Subjects, Sessions, and Attendance. Sessions link to Tutors and Subjects, while Attendance connects Students to Sessions, allowing multiple students per session. This design supports tasks such as scheduling, attendance tracking, and reporting. Primary and foreign keys enforce data consistency, and the relationships support queries such as session participation by subject or tutor workload. The database ensures that all stakeholders—students, tutors, staff, and faculty—can easily view, record, and analyze tutoring activity.
+## Database Improvements
+
+The database design was reviewed and improved to make the relationships between the main entities clearer.
+
+The main entities are:
+
+- Students
+- Tutors
+- Subjects
+- Sessions
+- Attendance
+
+The database uses primary keys and foreign keys to connect related tables. The Attendance table connects students with tutoring sessions and helps track attendance information.
+
+These improvements make the database structure easier to understand and maintain.
