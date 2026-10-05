@@ -78,3 +78,35 @@ SELECT attendance_status, COUNT(*) AS total_records
 FROM attendance
 GROUP BY attendance_status
 ORDER BY total_records DESC;
+
+-- Week 8: Join-Based Database Analysis
+
+-- Query 4: Sessions with tutor and subject information
+SELECT
+    sessions.Session_ID,
+    tutors.Name AS Tutor_Name,
+    subjects.Subject_Name
+FROM sessions
+JOIN tutors
+    ON sessions.Tutor_ID = tutors.Tutor_ID
+JOIN subjects
+    ON sessions.Subject_ID = subjects.Subject_ID;
+
+-- Query 5: Attendance with student information
+SELECT
+    attendance.Student_ID,
+    students.Name AS Student_Name,
+    attendance.Status
+FROM attendance
+JOIN students
+    ON attendance.Student_ID = students.Student_ID;
+
+-- Query 6: Total sessions by tutor
+SELECT
+    tutors.Name AS Tutor_Name,
+    COUNT(sessions.Session_ID) AS Total_Sessions
+FROM tutors
+JOIN sessions
+    ON tutors.Tutor_ID = sessions.Tutor_ID
+GROUP BY tutors.Name
+ORDER BY Total_Sessions DESC;
