@@ -1,77 +1,82 @@
-# Database Design Project Documentation
+# Week 6: Database Data Dictionary
 
 ## Project Overview
 
-This project is a database system for organizing and analyzing information about students, attendance, sessions, tutors, and subjects.
+This database is designed for a tutoring center. It stores information about students, tutors, subjects, tutoring sessions, and attendance. The tables are connected through shared identifiers so that SQL queries can be used to analyze tutoring activity and attendance.
 
-## Database Tables
+## Students
 
-### Students
+The Students table stores information about students who use the tutoring center.
 
-The Students table contains information about students, including their identifying information and academic details.
+| Field        | Description                        |
+| ------------ | ---------------------------------- |
+| student_id   | Unique identifier for each student |
+| student_name | Name of the student                |
+| email        | Student email address              |
 
-### Attendance
+The `student_id` is used to identify each student and connect students to tutoring sessions and attendance records.
 
-The Attendance table records student attendance information for sessions.
+## Tutors
 
-### Sessions
+The Tutors table stores information about tutors who provide tutoring services.
 
-The Sessions table contains information about scheduled sessions and session details.
+| Field      | Description                                          |
+| ---------- | ---------------------------------------------------- |
+| tutor_id   | Unique identifier for each tutor                     |
+| tutor_name | Name of the tutor                                    |
+| subject_id | Identifier for the subject associated with the tutor |
 
-### Tutors
+The `tutor_id` identifies each tutor and is used to connect tutors to tutoring sessions.
 
-The Tutors table contains information about tutors who provide instruction.
+## Subjects
 
-### Subjects
+The Subjects table stores information about subjects offered by the tutoring center.
 
-The Subjects table contains information about the subjects associated with the sessions.
+| Field        | Description                        |
+| ------------ | ---------------------------------- |
+| subject_id   | Unique identifier for each subject |
+| subject_name | Name of the subject                |
 
-## Table Relationships
+The `subject_id` identifies each subject and connects subjects to tutoring sessions.
 
-The tables are connected through related identifiers. Student information can be connected to attendance records, while attendance records can be connected to sessions. Sessions can also be associated with tutors and subjects.
+## Sessions
 
-These relationships allow the database to answer questions about students, attendance, sessions, tutors, and subjects.
+The Sessions table stores information about scheduled tutoring sessions.
 
-## SQL Analysis
+| Field        | Description                                      |
+| ------------ | ------------------------------------------------ |
+| session_id   | Unique identifier for each tutoring session      |
+| student_id   | Identifier for the student attending the session |
+| tutor_id     | Identifier for the tutor providing the session   |
+| subject_id   | Identifier for the subject being taught          |
+| session_date | Date of the tutoring session                     |
 
-The project includes SQL queries that can be used to view and analyze the data. These queries help examine student information, attendance records, sessions, tutors, and subjects.
+The Sessions table connects students, tutors, and subjects. It provides the main structure for analyzing tutoring activity.
 
-## Future Improvements
+## Attendance
 
-Future development could include additional queries, data validation, reporting, and analysis to make the database more useful for decision-making.
-## Week 6 Database Documentation Update
+The Attendance table records whether students attended their scheduled tutoring sessions.
 
-### Database Implementation Review
+| Field             | Description                                        |
+| ----------------- | -------------------------------------------------- |
+| attendance_id     | Unique identifier for an attendance record         |
+| session_id        | Identifier for the related tutoring session        |
+| attendance_status | Indicates whether the student attended the session |
 
-During Week 6, I reviewed the current database project structure and documentation. The project includes sample data for students, tutors, subjects, sessions, and attendance. I reviewed how these datasets support the database design and how the tables can be used together for future analysis.
+The `session_id` connects attendance records to the Sessions table.
 
-### Data Relationships
+## Database Relationships
 
-The database is designed around relationships between students, tutors, subjects, sessions, and attendance records. Students can participate in sessions, tutors can be associated with sessions, and attendance records can be connected to students and sessions. These relationships allow the database to support useful queries and reporting.
+The tables are connected using identifiers:
 
-### Documentation Improvements
+* `Students.student_id` connects students to their tutoring sessions.
+* `Tutors.tutor_id` connects tutors to tutoring sessions.
+* `Subjects.subject_id` connects subjects to tutoring sessions.
+* `Sessions.session_id` connects sessions to attendance records.
+* The Sessions table brings together students, tutors, and subjects for each tutoring session.
 
-I organized the database documentation to make the purpose of the main datasets and their relationships clearer. This documentation will help guide future database implementation, testing, and SQL query development.
+These relationships allow SQL queries to combine information from multiple tables and analyze tutoring activity, subjects, tutors, and attendance.
 
-### Next Steps
+## Purpose of the Data Dictionary
 
-The next stage of development will focus on continuing database testing, validating relationships between tables, and creating additional queries that provide useful information from the database.
-## Week 6: Data Dictionary
-
-### Students
-The students dataset contains information about students in the database. Student information can be used to identify students and connect them to sessions and attendance records.
-
-### Tutors
-The tutors dataset contains information about tutors. Tutor records can be connected to sessions to identify which tutor is responsible for a session.
-
-### Subjects
-The subjects dataset contains information about the subjects offered. Subject records can be connected to sessions to identify the subject being taught.
-
-### Sessions
-The sessions dataset contains information about scheduled tutoring sessions. Sessions connect students, tutors, and subjects and provide the main structure for analyzing tutoring activity.
-
-### Attendance
-The attendance dataset records whether students attended scheduled sessions. Attendance information can be used to analyze participation and attendance patterns.
-
-### Database Relationships
-The datasets work together through shared identifiers. These relationships allow the database to connect students with sessions, tutors, subjects, and attendance records. Clearly documenting these relationships will make future SQL queries and database testing easier.
+This data dictionary provides a reference for the database structure and explains the purpose of each table and field. It will make future SQL queries, testing, troubleshooting, and database maintenance easier.
