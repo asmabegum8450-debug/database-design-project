@@ -45,7 +45,7 @@ These are **suggested fields** to validate against the project schema, not verif
 - [ ] Confirm whether Attendance needs status, timestamp, or other fields.
 - [ ] Check uniqueness of primary keys and attendance pairs.
 - [ ] Check that all foreign key values resolve to parent records.
-- [ ] Update this dictionary to reflect verified implementation details.
+- [ ] Update this dictionary to reflect verified implementation details. 
 
 ## Example questions supported by this model
 
